@@ -1,0 +1,11 @@
+@mixin flex_row_center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin flex_row_spc_btw {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

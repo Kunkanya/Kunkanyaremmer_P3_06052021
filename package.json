@@ -1,0 +1,19 @@
+{
+  "name": "kunkanyaremmer_3_06052021",
+  "version": "1.0.0",
+  "description": "Project 3 Oh My Food",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./sass/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kunkanya/Kunkanyaremmer_3_06052021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kunkanya/Kunkanyaremmer_3_06052021/issues"
+  },
+  "homepage": "https://github.com/Kunkanya/Kunkanyaremmer_3_06052021#readme"
+}

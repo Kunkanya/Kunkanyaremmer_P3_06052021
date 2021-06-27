@@ -1,0 +1,26 @@
+.header{
+    &__logo{
+    display: block;
+    font-family: $font-logo;
+    font-size: $font-size-title;
+    background-color: white;
+    box-shadow: 0px 5px 6px 0px 20%;
+    @include flex_row_center;
+    }
+    &__search{
+        font-size: 1.5rem;
+        padding : $padding-height 0;
+        background-color: #DCDCDC;
+        @include flex_row_center;
+        & i{
+            font-size: 1.2rem; 
+        }
+        & span{
+        font-family: $font-text;
+
+        font-size: 1.2rem;
+        padding-left : $padding-height;
+        }
+    }
+
+}
