@@ -1,0 +1,9 @@
+.fonct{
+    background-color: white;
+    padding: $padding-width ;
+}
+
+.btn__container{
+    padding : $padding-width 0;
+    @include grid_col3;
+}
