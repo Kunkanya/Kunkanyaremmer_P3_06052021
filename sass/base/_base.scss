@@ -11,3 +11,16 @@ body{
     font-family: $font-text;
 }
 
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+    & li{
+      text-decoration: none;  
+    }
+}
+
+
+

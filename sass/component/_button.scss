@@ -9,6 +9,7 @@
     font-size: 1rem;        
     }
 }
+
 .btn{
     &__menu{
         background-color: $color-background-main ;
@@ -32,7 +33,7 @@
             border-radius: 50px;
             width :25px;
             height : 25px;
-            @include flex_row_center;
+            @include flex(row,center);
             align-items: center;
             position:relative;
             top: -3rem;

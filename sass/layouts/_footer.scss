@@ -1,0 +1,23 @@
+footer{
+    color: white;
+    padding: $padding-width $padding-height;
+    background-color: $color-footer;
+    a{
+        &:visited ,&:active,&:link {
+            color : white;
+        }
+        &:hover{
+            border-bottom: solid 1px white;
+        }
+    }
+    & h4{
+        font-family: $font-logo;
+        font-weight: $font-weight-thin;
+    }
+    & li{
+        line-height: 2;
+        color : white;
+        font-size: 1rem;
+  
+    }
+}

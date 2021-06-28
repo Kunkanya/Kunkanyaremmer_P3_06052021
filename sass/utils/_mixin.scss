@@ -1,13 +1,7 @@
-@mixin flex_row_center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-@mixin flex_row_spc_btw {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+@mixin flex($fx-direction , $fx-justify) {
+    display:flex;
+    flex-direction: $fx-direction;
+    justify-content:$fx-justify;
 }
 
 @mixin grid_col3 {
@@ -16,4 +10,12 @@
     grid-row: auto;
     column-gap: 3rem;
     justify-content: flex-start;
+}
+
+@mixin grid($no){
+    display: grid;
+    grid-template-columns: repeat($no, 1fr);
+    grid-template-rows: auto;
+    column-gap: $column-gap;
+
 }
