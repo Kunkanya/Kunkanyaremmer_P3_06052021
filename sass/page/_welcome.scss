@@ -1,0 +1,150 @@
+
+/*--------------------------->
+<!--Section 2 : Fonctionement-->
+<!---------------------------*/
+
+.fonct{
+    @extend %padding_section;
+    background-color: white;
+}
+
+/*--------------------------->
+<!--Section 3 : Restuarants-->
+<!---------------------------*/
+
+main{
+    @extend %padding_section;
+    background-color: $color-background-main;
+}
+
+.cards{
+    padding-top : 1rem;
+}
+.card{ 
+    transition: 300ms;
+    &__tag {
+        width: 80px;
+        height: 30px;
+        background-color: $color-tertiary;
+        color: darken($color-tertiary, $amount: 40%);
+        border-radius: 3px;
+        @include flex(row,center);
+        align-items: center;
+        font-size: 0.9rem;
+        font-weight: bold;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+    &__container{
+        @extend %shadow;
+        position: relative;
+        margin-bottom: 1rem;
+        border-radius: 15px;    
+        width: 100%;
+        height : 250px; 
+        overflow: hidden;
+        background-color: white;
+        & img{
+            width:100%;
+            height: 235px;
+            margin-top : -60px;
+            object-fit: cover;
+        }
+        & figcaption{
+            padding: 0.5rem 1rem ;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 1.5; 
+        }
+    }
+    &__name h3 strong{
+        font-size: 1.2rem;
+    }
+    &:hover{
+        transform : scale(1.02);
+ 
+    }
+    &__heart{
+        display: block ;  
+            & i{
+                font-size: 1.5rem;
+            }
+            &--nbg{
+                display: block;
+            }
+            &--bg{
+                display: none;
+            }
+            &:hover{
+                .card__heart--nbg{
+                    display: none;
+                }
+                .card__heart--bg{
+                    display: block;
+                    @include background_heart;
+                }
+            }
+            &:visited{
+                .card__heart--bg{
+                    display: block;
+                    @include background_heart;
+                }
+            }
+    }
+}
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+@media screen  and (min-width: 1441px) {
+    .fonction, .main, .footer{
+    width: 1440px;
+    margin: 0 auto;
+    }
+}
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+@media screen  and (min-width: 769px) {
+
+/*--------------------------->
+<!--Section 2 : Fonctionnement-->
+<!---------------------------*/
+    .btn{
+        &__container{
+            @include grid(3);
+        }
+    }
+
+/*--------------------------->
+<!--Section 3 : Restuarants-->
+<!---------------------------*/
+.cards{
+    @include grid(2);
+}
+.card{
+    &__container{
+        width : 100%;
+    }
+}
+
+
+}
+
+
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+    .btn__container{
+        @include flex(column, center);
+    }
+}

@@ -1,15 +1,19 @@
+
 /*--------Uitls-------*/
 @import "./utils/variables";
 @import "./utils/mixin";
-
-/*--------Layout-------*/
-@import "./layouts/header";
-@import "./layouts/index";
-@import "./layouts/footer";
+@import "./utils/placeholder";
 
 /*--------Base-------*/
 @import "./base/base";
 @import "./base/typography";
+
+/*--------layouts-------*/
+@import "./layouts/header";
+@import "./layouts/footer";
+
+/*--------Page-------*/
+@import "./page/welcome";
 
 /*--------Buttons-------*/
 @import "./component/button"

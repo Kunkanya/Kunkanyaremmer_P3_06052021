@@ -1,7 +1,8 @@
 footer{
     color: white;
-    padding: $padding-width $padding-height;
     background-color: $color-footer;
+    font-weight: 300;
+    padding : 1.5rem 1rem;
     a{
         &:visited ,&:active,&:link {
             color : white;
@@ -10,14 +11,22 @@ footer{
             border-bottom: solid 1px white;
         }
     }
-    & h4{
+    & h3{
         font-family: $font-logo;
-        font-weight: $font-weight-thin;
+    }
+    & li:first-child{
+        padding-bottom: 1rem;
+        padding-top : 0;
     }
     & li{
-        line-height: 2;
+        line-height: 1.5;
         color : white;
-        font-size: 1rem;
-  
+        &  i{
+            width : 1rem;
+            font-size: 0.7rem;
+        }
+        & span{
+            margin-left: 0.5rem;
+        }
     }
 }

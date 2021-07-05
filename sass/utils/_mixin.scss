@@ -19,3 +19,12 @@
     column-gap: $column-gap;
 
 }
+
+
+@mixin background_heart{
+font-size: 1.5rem;
+background: linear-gradient(10deg,  $color-secondary ,$color-primary);
+/*--clip background--*/
+-webkit-background-clip: text;
+-webkit-text-fill-color:transparent;
+}
