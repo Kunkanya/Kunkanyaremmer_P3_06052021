@@ -66,5 +66,125 @@
 .btn__menu{
     @include flex(row, flex-start);
     align-items: center;
+}
 
+/*----------------------------------------------------------->
+/*----------------------------------------------------------->
+/*----------------------------------------------------------->
+<!-------------------Button for menu Reatuarant-------------->
+<!----------------------------------------------------------*/
+/*----------------------------------------------------------->
+/*-----------------------------------------------------------*/
+
+.btnmenu{
+    &__type{
+        @extend %btnmenu_type-typo;
+        border-bottom: solid 3px $color-tertiary;
+        padding-bottom: 0.2rem;
+        margin-bottom: 1rem;
+        width: 40px;
+    }
+    &__cardcontainer{
+        position: relative;
+    }
+    &__card{
+        position : relative;
+        height: 70px;
+        background-color: white;
+        border-radius: 20px;
+        padding:0.8rem 1.5rem 0.5rem 0.8rem;
+        @extend %shadow; 
+        &--name{
+        @extend %btnmenu_card-typo;
+        overflow: hidden;
+        }
+        &--description{
+            line-height: 1.6;
+            @include flex(row, space-between);
+            & p{
+                font-weight: 300;
+            }
+  
+        }
+
+        }
+    }
+
+.test{    
+    &::after{
+        display: inline-block;
+        content: "test";
+        border : 1 solid green;
+        width: 40px;
+        background-color: yellow;
+        display: none;
+    }
+
+}
+.checked{
+    width: 60px;
+    height: 70px;
+    background-color: $color-tertiary;
+    border-radius : 0 20px 20px 0;                
+    position:absolute;
+    top:0;
+    right: 0;
+    overflow: hidden;  
+    display: none;
+    transition : animation 500ms;
+    & > i{
+                width : fit-content;
+                height: fit-content;
+                position: relative;
+                top: 30%;
+                left: 25%;
+                color : white;
+                font-size: 1.5rem;
+            }
+}
+.btnmenu__card:hover {
+    overflow: hidden;
+    & .btnmenu__card--description{
+        border:1px solid red;
+        transition:500ms;
+        &::after{
+            display: block;
+        }
+    }
+    & .test{
+        display: block;
+    }
+    & .checked{
+        display: block;
+        animation: move-left 500ms;
+        & i{
+            animation: spin 500ms;
+        }
+    }
+}
+
+@keyframes move-left {
+ from{
+     right : -60px;
+    }   
+to{
+    right : 0px;
+    }   
+}
+@keyframes pushed-left {
+    from{
+        right : 0px;
+    }   
+   to{
+       transform : scaleX(-80%);
+   }   
+}
+   
+@keyframes spin{
+    0%{
+        transform : rotate(0deg);
+    }
+    100%{
+        transform : rotate(360deg);
+    }
 }

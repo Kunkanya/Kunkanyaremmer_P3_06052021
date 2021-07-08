@@ -2,6 +2,27 @@
     padding: 3rem 1rem;   
 }
 
+%padding_section_menu{
+    padding: 2rem 1rem;
+}
+
 %shadow{
     box-shadow: 0 5px 20px darken($color-background-main, 15%);
+}
+
+%logo_text{
+    font-family: $font-logo;
+    font-weight: 400;
+    font-size: $font-size-title;
+}
+
+%btnmenu_type-typo{
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+%btnmenu_card-typo{
+    font-size: 1.2rem;
+    font-weight: 700;
 }

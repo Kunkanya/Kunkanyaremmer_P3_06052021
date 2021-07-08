@@ -1,15 +1,19 @@
+/*--------------------------------------*/
+/*-----------header Index.html----------*/
+/*--------------------------------------*/
+
 .header{
     &__logo{
     display: block;
-    font-family: $font-logo;
-    font-weight: 400;
-    font-size: $font-size-title;
     background-color: white;
     box-shadow: 0 1px 5px 0 rgb(0 0 0 / 25%);
-    padding: $padding-height 0;
+    padding: 1rem  0 0.5rem 0;
     @include flex(row, center);
     position: relative;
     }
+}
+
+.header{
     &__search{
         font-size: 1rem;
         padding : $padding-height 0;
@@ -30,6 +34,51 @@
             padding: 1.5rem 1rem;
         }
     }
-
 }
 
+/*------------------------------------------------*/
+/*----------Header for restaurant page------------*/
+/*------------------------------------------------*/
+
+.header{
+    &__menu{
+        position: relative;
+        align-items: baseline;
+        &--back{
+            position: absolute;
+            left: 1.6rem;
+            top: 1.6rem;
+            i{
+                font-size: 1.3rem;
+            }
+        }
+    }
+    &__pic{
+        height: 260px;
+        & img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            position: relative;
+        }
+    }
+}
+
+.sMenu{
+    background-color: $color-background-main;
+    height: 100vh;
+    border-radius: 35px 35px 0 0;
+    margin-top: -50px;
+    padding: 0 1rem;
+}
+
+.menu{
+    &__title{
+        position: relative;
+        @include flex(row,space-between);
+        align-items: center;
+        padding: 2rem 1rem 2rem 0;  
+        z-index: 1;
+    }
+}

@@ -13,6 +13,9 @@ h3{
     font-size: 1.2rem;
 }
 
+h1{
+   @extend %logo_text;
+}
 
 textarea{
     font-size: $font-weight-thin;

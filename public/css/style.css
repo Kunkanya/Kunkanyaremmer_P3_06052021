@@ -3,8 +3,25 @@ main, .fonct {
   padding: 3rem 1rem;
 }
 
-.btn__menu, .btn__submit, .card__container {
+.btnmenu__card, .btn__menu, .btn__submit, .card__container {
   box-shadow: 0 5px 20px #d0d0d0;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.btnmenu__type {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.btnmenu__card--name {
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 /*--------Base-------*/
@@ -50,19 +67,20 @@ textarea {
 }
 
 /*--------layouts-------*/
+/*--------------------------------------*/
+/*-----------header Index.html----------*/
+/*--------------------------------------*/
 .header__logo {
   display: block;
-  font-family: "Shrikhand", sans-serif;
-  font-weight: 400;
-  font-size: 1.8rem;
   background-color: white;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.25);
-  padding: 1rem 0;
+  padding: 1rem 0 0.5rem 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   position: relative;
 }
+
 .header__search {
   font-size: 1rem;
   padding: 1rem 0;
@@ -84,6 +102,50 @@ textarea {
 }
 .header__explorer h3 {
   padding: 1.5rem 1rem;
+}
+
+/*------------------------------------------------*/
+/*----------Header for restaurant page------------*/
+/*------------------------------------------------*/
+.header__menu {
+  position: relative;
+  align-items: baseline;
+}
+.header__menu--back {
+  position: absolute;
+  left: 1.6rem;
+  top: 1.6rem;
+}
+.header__menu--back i {
+  font-size: 1.3rem;
+}
+.header__pic {
+  height: 260px;
+}
+.header__pic img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: relative;
+}
+
+.sMenu {
+  background-color: #F6F6F6;
+  height: 100vh;
+  border-radius: 35px 35px 0 0;
+  margin-top: -50px;
+  padding: 0 1rem;
+}
+
+.menu__title {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem 2rem 0;
+  z-index: 1;
 }
 
 footer {
@@ -193,21 +255,13 @@ main {
   display: block;
 }
 .card__heart--bg {
-  display: none;
+  display: none !important;
 }
 .card__heart:hover .card__heart--nbg {
   display: none;
 }
 .card__heart:hover .card__heart--bg {
-  display: block;
-  font-size: 1.5rem;
-  background: linear-gradient(10deg, #FF79DA, #9356DC);
-  /*--clip background--*/
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.card__heart:visited .card__heart--bg {
-  display: block;
+  display: block !important;
   font-size: 1.5rem;
   background: linear-gradient(10deg, #FF79DA, #9356DC);
   /*--clip background--*/
@@ -338,6 +392,119 @@ main {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+}
+
+/*----------------------------------------------------------->
+/*----------------------------------------------------------->
+/*----------------------------------------------------------->
+<!-------------------Button for menu Reatuarant-------------->
+<!----------------------------------------------------------*/
+/*----------------------------------------------------------->
+/*-----------------------------------------------------------*/
+.btnmenu__type {
+  border-bottom: solid 3px #99E2D0;
+  padding-bottom: 0.2rem;
+  margin-bottom: 1rem;
+  width: 40px;
+}
+.btnmenu__cardcontainer {
+  position: relative;
+}
+.btnmenu__card {
+  position: relative;
+  height: 70px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 0.8rem 1.5rem 0.5rem 0.8rem;
+}
+.btnmenu__card--name {
+  overflow: hidden;
+}
+.btnmenu__card--description {
+  line-height: 1.6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.btnmenu__card--description p {
+  font-weight: 300;
+}
+
+.test::after {
+  display: inline-block;
+  content: "test";
+  border: 1 solid green;
+  width: 40px;
+  background-color: yellow;
+  display: none;
+}
+
+.checked {
+  width: 60px;
+  height: 70px;
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  display: none;
+  transition: animation 500ms;
+}
+.checked > i {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  top: 30%;
+  left: 25%;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.btnmenu__card:hover {
+  overflow: hidden;
+}
+.btnmenu__card:hover .btnmenu__card--description {
+  border: 1px solid red;
+  transition: 500ms;
+}
+.btnmenu__card:hover .btnmenu__card--description::after {
+  display: block;
+}
+.btnmenu__card:hover .test {
+  display: block;
+}
+.btnmenu__card:hover .checked {
+  display: block;
+  animation: move-left 500ms;
+}
+.btnmenu__card:hover .checked i {
+  animation: spin 500ms;
+}
+
+@keyframes move-left {
+  from {
+    right: -60px;
+  }
+  to {
+    right: 0px;
+  }
+}
+@keyframes pushed-left {
+  from {
+    right: 0px;
+  }
+  to {
+    transform: scaleX(-80%);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

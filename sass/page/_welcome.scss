@@ -64,6 +64,7 @@ main{
     }
     &:hover{
         transform : scale(1.02);
+        
  
     }
     &__heart{
@@ -75,23 +76,18 @@ main{
                 display: block;
             }
             &--bg{
-                display: none;
+                display: none !important;
             }
             &:hover{
                 .card__heart--nbg{
                     display: none;
                 }
                 .card__heart--bg{
-                    display: block;
+                    display: block !important;
                     @include background_heart;
                 }
             }
-            &:visited{
-                .card__heart--bg{
-                    display: block;
-                    @include background_heart;
-                }
-            }
+ 
     }
 }
 /*-------------------------------------------------------------*/
