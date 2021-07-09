@@ -9,6 +9,7 @@
 html body{
     /*increment mycounter reset */
     counter-reset: mycounter;
+    counter-reset: menu_counter;
 }
 
 a, ul > li{

@@ -93,34 +93,28 @@
         background-color: white;
         border-radius: 20px;
         padding:0.8rem 1.5rem 0.5rem 0.8rem;
-        @extend %shadow; 
+        margin: 1rem 0;
+        @extend %shadow;
+        @extend %transition-animation;
+        animation: slidein 1s ease-out backwards ;
+/*        animation: show 1s ease-out 1s backwards ;*/
         &--name{
         @extend %btnmenu_card-typo;
-        overflow: hidden;
+        @extend %text-overflow; 
         }
         &--description{
             line-height: 1.6;
             @include flex(row, space-between);
+            @extend %transition-animation;
             & p{
                 font-weight: 300;
+                @extend %text-overflow;
+                @extend %transition-animation;
             }
-  
-        }
-
         }
     }
-
-.test{    
-    &::after{
-        display: inline-block;
-        content: "test";
-        border : 1 solid green;
-        width: 40px;
-        background-color: yellow;
-        display: none;
-    }
-
 }
+
 .checked{
     width: 60px;
     height: 70px;
@@ -131,60 +125,27 @@
     right: 0;
     overflow: hidden;  
     display: none;
-    transition : animation 500ms;
     & > i{
                 width : fit-content;
                 height: fit-content;
                 position: relative;
-                top: 30%;
+                top: 32.5%;
                 left: 25%;
                 color : white;
                 font-size: 1.5rem;
             }
 }
+
 .btnmenu__card:hover {
     overflow: hidden;
     & .btnmenu__card--description{
-        border:1px solid red;
-        transition:500ms;
-        &::after{
-            display: block;
-        }
-    }
-    & .test{
-        display: block;
+        animation: pushed-left 1s ease-out forwards;
     }
     & .checked{
         display: block;
-        animation: move-left 500ms;
         & i{
-            animation: spin 500ms;
+            animation: spin 1s ease-out;
         }
     }
 }
 
-@keyframes move-left {
- from{
-     right : -60px;
-    }   
-to{
-    right : 0px;
-    }   
-}
-@keyframes pushed-left {
-    from{
-        right : 0px;
-    }   
-   to{
-       transform : scaleX(-80%);
-   }   
-}
-   
-@keyframes spin{
-    0%{
-        transform : rotate(0deg);
-    }
-    100%{
-        transform : rotate(360deg);
-    }
-}

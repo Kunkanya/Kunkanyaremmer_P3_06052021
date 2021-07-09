@@ -21,6 +21,8 @@ main{
     padding-top : 1rem;
 }
 .card{ 
+    @extend %transition-animation;
+    animation: slidein 1s ease-out backwards ;
     transition: 300ms;
     &__tag {
         width: 80px;

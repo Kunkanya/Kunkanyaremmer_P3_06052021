@@ -26,3 +26,15 @@
     font-size: 1.2rem;
     font-weight: 700;
 }
+
+%text-overflow{
+white-space: nowrap;
+overflow: hidden;
+text-overflow: clip;
+text-overflow: ellipsis;
+text-overflow: "...";    
+}
+
+%transition-animation{
+    transition : animation 1s linear;
+}

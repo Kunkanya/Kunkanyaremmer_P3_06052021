@@ -3,6 +3,7 @@
 @import "./utils/variables";
 @import "./utils/mixin";
 @import "./utils/placeholder";
+@import "./utils/functions";
 
 /*--------Base-------*/
 @import "./base/base";
@@ -16,4 +17,5 @@
 @import "./page/welcome";
 
 /*--------Buttons-------*/
-@import "./component/button"
+@import "./component/button";
+@import "./component/animation";

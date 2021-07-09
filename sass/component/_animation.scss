@@ -1,0 +1,47 @@
+@keyframes move-left {
+    0%{
+        max-width: 0%;
+        }   
+    
+    100%{
+        max-width: 100%;
+        }   
+}
+
+@keyframes pushed-left {
+    0%{
+        max-width : 100%;
+    }   
+   100%{
+       max-width : calc(100% - 60px);
+   }   
+}
+   
+@keyframes spin{
+    0%{
+        transform : rotate(0deg);
+    }
+    100%{
+        transform : rotate(360deg);
+    }
+}
+
+/*
+    animation : slidein 1s linear counter(menu_counter)*0.5s backwards;
+*/
+
+
+
+@keyframes slidein {
+    0%{
+        transform: translateY(20px);
+        opacity: 0 ;
+    }
+    
+    100%{
+        transform: translateY(0);
+        opacity: 1;  
+  }
+}
+
+    

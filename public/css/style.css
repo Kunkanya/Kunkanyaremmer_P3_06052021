@@ -24,6 +24,94 @@ h1 {
   font-weight: 700;
 }
 
+.btnmenu__card--description p, .btnmenu__card--name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  text-overflow: ellipsis;
+  text-overflow: "...";
+}
+
+.btnmenu__card--description p, .btnmenu__card--description, .btnmenu__card, .card {
+  transition: animation 1s linear;
+}
+
+/*---------------------------------------*/
+/*------Loop for create animation-delay in 
+each menu/card while loading page--------*/
+/*---------------------------------------*/
+.btnmenu__card:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+.card:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+.btnmenu__card:nth-of-type(2) {
+  animation-delay: 1s;
+}
+
+.card:nth-of-type(2) {
+  animation-delay: 1s;
+}
+
+.btnmenu__card:nth-of-type(3) {
+  animation-delay: 1.5s;
+}
+
+.card:nth-of-type(3) {
+  animation-delay: 1.5s;
+}
+
+.btnmenu__card:nth-of-type(4) {
+  animation-delay: 2s;
+}
+
+.card:nth-of-type(4) {
+  animation-delay: 2s;
+}
+
+.btnmenu__card:nth-of-type(5) {
+  animation-delay: 2.5s;
+}
+
+.card:nth-of-type(5) {
+  animation-delay: 2.5s;
+}
+
+.btnmenu__card:nth-of-type(6) {
+  animation-delay: 3s;
+}
+
+.card:nth-of-type(6) {
+  animation-delay: 3s;
+}
+
+.btnmenu__card:nth-of-type(7) {
+  animation-delay: 3.5s;
+}
+
+.card:nth-of-type(7) {
+  animation-delay: 3.5s;
+}
+
+.btnmenu__card:nth-of-type(8) {
+  animation-delay: 4s;
+}
+
+.card:nth-of-type(8) {
+  animation-delay: 4s;
+}
+
+.btnmenu__card:nth-of-type(9) {
+  animation-delay: 4.5s;
+}
+
+.card:nth-of-type(9) {
+  animation-delay: 4.5s;
+}
+
 /*--------Base-------*/
 *,
 *::before,
@@ -36,6 +124,7 @@ h1 {
 html body {
   /*increment mycounter reset */
   counter-reset: mycounter;
+  counter-reset: menu_counter;
 }
 
 a, ul > li {
@@ -132,9 +221,10 @@ textarea {
 
 .sMenu {
   background-color: #F6F6F6;
-  height: 100vh;
+  height: fit-content;
   border-radius: 35px 35px 0 0;
   margin-top: -50px;
+  margin-bottom: 2rem;
   padding: 0 1rem;
 }
 
@@ -199,6 +289,7 @@ main {
 }
 
 .card {
+  animation: slidein 1s ease-out backwards;
   transition: 300ms;
 }
 .card__tag {
@@ -416,9 +507,9 @@ main {
   background-color: white;
   border-radius: 20px;
   padding: 0.8rem 1.5rem 0.5rem 0.8rem;
-}
-.btnmenu__card--name {
-  overflow: hidden;
+  margin: 1rem 0;
+  animation: slidein 1s ease-out backwards;
+  /*        animation: show 1s ease-out 1s backwards ;*/
 }
 .btnmenu__card--description {
   line-height: 1.6;
@@ -428,15 +519,6 @@ main {
 }
 .btnmenu__card--description p {
   font-weight: 300;
-}
-
-.test::after {
-  display: inline-block;
-  content: "test";
-  border: 1 solid green;
-  width: 40px;
-  background-color: yellow;
-  display: none;
 }
 
 .checked {
@@ -449,13 +531,12 @@ main {
   right: 0;
   overflow: hidden;
   display: none;
-  transition: animation 500ms;
 }
 .checked > i {
   width: fit-content;
   height: fit-content;
   position: relative;
-  top: 30%;
+  top: 32.5%;
   left: 25%;
   color: white;
   font-size: 1.5rem;
@@ -465,37 +546,29 @@ main {
   overflow: hidden;
 }
 .btnmenu__card:hover .btnmenu__card--description {
-  border: 1px solid red;
-  transition: 500ms;
-}
-.btnmenu__card:hover .btnmenu__card--description::after {
-  display: block;
-}
-.btnmenu__card:hover .test {
-  display: block;
+  animation: pushed-left 1s ease-out forwards;
 }
 .btnmenu__card:hover .checked {
   display: block;
-  animation: move-left 500ms;
 }
 .btnmenu__card:hover .checked i {
-  animation: spin 500ms;
+  animation: spin 1s ease-out;
 }
 
 @keyframes move-left {
-  from {
-    right: -60px;
+  0% {
+    max-width: 0%;
   }
-  to {
-    right: 0px;
+  100% {
+    max-width: 100%;
   }
 }
 @keyframes pushed-left {
-  from {
-    right: 0px;
+  0% {
+    max-width: 100%;
   }
-  to {
-    transform: scaleX(-80%);
+  100% {
+    max-width: calc(100% - 60px);
   }
 }
 @keyframes spin {
@@ -504,6 +577,19 @@ main {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+/*
+    animation : slidein 1s linear counter(menu_counter)*0.5s backwards;
+*/
+@keyframes slidein {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
