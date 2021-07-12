@@ -10,7 +10,13 @@
     color :  white;
     background-image: linear-gradient(350deg,$color-primary,$color-secondary);
     @extend %shadow;
-    font-size: 1rem;        
+    font-size: 1rem;
+    cursor: pointer;  
+    transition : 0.5s ease;      
+        &:hover{
+            transform: scale(1.05);
+            @extend %shadow-hover;
+        }
     }
 }
 
@@ -33,7 +39,9 @@
         height: 75px;
         position: relative;
         margin: 1rem 0;
-        &::before{
+        cursor: pointer;
+        transition : 0.5s ease;
+            &::before{
             display: block;
             /*increment mycounter by 1 */
             counter-increment: mycounter ; 
@@ -48,19 +56,20 @@
             align-items: center;
             position: absolute;
             left: -12.5px;
-        }
-        & i{
-            padding : 0 2rem ;            
-            font-size: 1.25rem;
-            color: darken($color: $color-background-main, $amount: 50);
-        }
-        &:hover{
-            cursor: pointer;
-            background-color: lighten($color-primary, 35%);
-            & i{
-                color : $color-primary
             }
-        }
+            & i{
+                padding : 0 2rem ;            
+                font-size: 1.25rem;
+                color: darken($color: $color-background-main, $amount: 50);
+            }
+            &:hover{
+                background-color: lighten($color-primary, 35%);
+                @extend %shadow-hover;
+                transform : scale(1.02);
+                & i{
+                    color : $color-primary
+                }
+            }
     }
 }
 .btn__menu{
@@ -94,10 +103,13 @@
         border-radius: 20px;
         padding:0.8rem 1.5rem 0.5rem 0.8rem;
         margin: 1rem 0;
+        cursor: pointer;
         @extend %shadow;
         @extend %transition-animation;
         animation: slidein 1s ease-out backwards ;
-/*        animation: show 1s ease-out 1s backwards ;*/
+        &:last-child{
+            margin-bottom : 3rem;
+        }
         &--name{
         @extend %btnmenu_card-typo;
         @extend %text-overflow; 

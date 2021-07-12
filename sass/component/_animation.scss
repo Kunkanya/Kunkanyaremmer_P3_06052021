@@ -1,3 +1,6 @@
+/**********************************************************************/
+/*************animation for hover the menu card :  Green bar***********/
+/**********************************************************************/
 @keyframes move-left {
     0%{
         max-width: 0%;
@@ -16,7 +19,10 @@
        max-width : calc(100% - 60px);
    }   
 }
-   
+
+/**********************************************************************/
+/***********animation for spinning check icon in the menu page*********/
+/**********************************************************************/   
 @keyframes spin{
     0%{
         transform : rotate(0deg);
@@ -26,12 +32,9 @@
     }
 }
 
-/*
-    animation : slidein 1s linear counter(menu_counter)*0.5s backwards;
-*/
-
-
-
+/**********************************************************************/
+/* animation : slidein 1s linear counter(menu_counter)*0.5s backwards;*/
+/**********************************************************************/
 @keyframes slidein {
     0%{
         transform: translateY(20px);
@@ -44,4 +47,20 @@
   }
 }
 
-    
+/**********************************************************************/
+/*************animation for the heart when the color change************/
+/**********************************************************************/
+@keyframes heart-color{
+    0%{
+        opacity : 0;
+/*        transform: scale(1);*/
+    }
+    50%{
+        opacity : 0.5;
+  /*      transform : scale(1.2);*/
+    }
+    100%{
+        opacity: 1;
+  /*      transform : scale(1);*/
+    }
+}

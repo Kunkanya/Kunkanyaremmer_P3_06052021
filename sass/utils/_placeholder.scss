@@ -7,8 +7,13 @@
 }
 
 %shadow{
-    box-shadow: 0 5px 20px darken($color-background-main, 15%);
+    box-shadow: 0 5px 8px darken($color-background-main, 10%);
 }
+
+%shadow-hover{
+    box-shadow: 0 5px  8px  darken($color-background-main, 25%);
+}
+
 
 %logo_text{
     font-family: $font-logo;

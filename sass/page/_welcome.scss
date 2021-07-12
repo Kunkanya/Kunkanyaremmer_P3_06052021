@@ -66,32 +66,33 @@ main{
     }
     &:hover{
         transform : scale(1.02);
-        
- 
     }
     &__heart{
+        transition: 1s;
         display: block ;  
-            & i{
-                font-size: 1.5rem;
-            }
-            &--nbg{
-                display: block;
-            }
-            &--bg{
-                display: none !important;
-            }
-            &:hover{
-                .card__heart--nbg{
-                    display: none;
+        & i{
+            font-size: 1.5rem;
+        }
+        &--nbg{
+            display: block;
+        }
+        &--bg{
+            display: none !important;
+        }
+        &:hover{
+            .card__heart--nbg{
+                display: none;
                 }
-                .card__heart--bg{
-                    display: block !important;
-                    @include background_heart;
+            .card__heart--bg{
+                animation: heart-color 1.5s ease forwards;
+                display: block !important;
+                @include background_heart;
                 }
-            }
- 
-    }
+        }
+    }    
 }
+
+
 /*-------------------------------------------------------------*/
 /*-------------------------------------------------------------*/
 /*-------------------------------------------------------------*/
@@ -114,11 +115,11 @@ main{
 /*--------------------------->
 <!--Section 2 : Fonctionnement-->
 <!---------------------------*/
-    .btn{
-        &__container{
-            @include grid(3);
-        }
+.btn{
+    &__container{
+        @include grid(3);
     }
+}
 
 /*--------------------------->
 <!--Section 3 : Restuarants-->
@@ -131,8 +132,6 @@ main{
         width : 100%;
     }
 }
-
-
 }
 
 
