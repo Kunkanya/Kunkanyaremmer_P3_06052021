@@ -24,7 +24,7 @@ h1 {
 }
 
 .btnmenu__card--name {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
 }
 
@@ -498,11 +498,7 @@ main {
 }
 
 /*----------------------------------------------------------->
-/*----------------------------------------------------------->
-/*----------------------------------------------------------->
 <!-------------------Button for menu Reatuarant-------------->
-<!----------------------------------------------------------*/
-/*----------------------------------------------------------->
 /*-----------------------------------------------------------*/
 .btnmenu__type {
   border-bottom: solid 3px #99E2D0;
@@ -515,7 +511,7 @@ main {
 }
 .btnmenu__card {
   position: relative;
-  height: 70px;
+  height: fit-content;
   background-color: white;
   border-radius: 20px;
   padding: 0.8rem 1.5rem 0.5rem 0.8rem;
@@ -526,6 +522,10 @@ main {
 .btnmenu__card:last-child {
   margin-bottom: 3rem;
 }
+.btnmenu__card--name {
+  max-width: 280px;
+  white-space: normal;
+}
 .btnmenu__card--description {
   line-height: 1.6;
   display: flex;
@@ -533,7 +533,11 @@ main {
   justify-content: space-between;
 }
 .btnmenu__card--description p {
+  font-size: 0.93em;
   font-weight: 300;
+}
+.btnmenu__card--description p + strong {
+  padding-left: 10px;
 }
 
 .checked {
@@ -568,6 +572,17 @@ main {
 }
 .btnmenu__card:hover .checked i {
   animation: spin 1s ease-out;
+}
+
+/*--------------------------------------------->
+<!------Menu Restaurant : Button Commander----->
+<!--------------------------------------------*/
+.commander {
+  text-align: center;
+  padding: 1rem 0 1.5rem 0;
+}
+.commander .btn__submit {
+  padding: 1rem 3rem;
 }
 
 /**********************************************************************/
