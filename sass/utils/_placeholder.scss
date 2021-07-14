@@ -14,7 +14,6 @@
     box-shadow: 0 5px  8px  darken($color-background-main, 25%);
 }
 
-
 %logo_text{
     font-family: $font-logo;
     font-weight: 400;
@@ -35,9 +34,7 @@
 %text-overflow{
 white-space: nowrap;
 overflow: hidden;
-text-overflow: clip;
-text-overflow: ellipsis;
-text-overflow: "...";    
+text-overflow: ellipsis; 
 }
 
 %transition-animation{

@@ -76,12 +76,14 @@
 .btn__menu{
     @include flex(row, flex-start);
     align-items: center;
+
 }
 
 /*----------------------------------------------------------->
 <!-------------------Button for menu Reatuarant-------------->
 /*-----------------------------------------------------------*/
 .btnmenu{
+    animation: slidein 1s linear backwards ;
     &__type{
         @extend %btnmenu_type-typo;
         border-bottom: solid 3px $color-tertiary;
@@ -107,8 +109,6 @@
             margin-bottom : 3rem;
         }
         &--name{
-        max-width: 280px;
-        white-space: normal;
         @extend %btnmenu_card-typo;
         @extend %text-overflow; 
         }
@@ -121,9 +121,6 @@
                 font-weight: 300;
                 @extend %text-overflow;
                 @extend %transition-animation;
-                & + strong{
-                    padding-left : 10px;
-                }
             }
         }
     }
@@ -152,7 +149,8 @@
 
 .btnmenu__card:hover {
     overflow: hidden;
-    & .btnmenu__card--description{
+    & .btnmenu__card--description ,
+    .btnmenu__card--name {
         animation: pushed-left 1s ease-out forwards;
     }
     & .checked{

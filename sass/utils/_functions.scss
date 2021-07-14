@@ -2,12 +2,20 @@
 /*------Loop for create animation-delay in 
 each menu/card while loading page--------*/
 /*---------------------------------------*/
-@for $i from 1 through 9{
+@for $i from 1 through 4{
+    //--Animation for each menu card    
+    .card:nth-of-type(#{$i}){
+        animation-delay: ($i * 0.5)+s;
+        }           
+    
     .btnmenu__card:nth-of-type(#{$i}){
         animation-delay: ($i * 0.5)+s;
     }
+    //--Animation for container Entre+plat+dessert
+    .btnmenu:nth-of-type(#{$i}){
+        animation-delay: ($i * 0.5)+s;
+        }    
+
     
-    .card:nth-of-type(#{$i}){
-    animation-delay: ($i * 0.5)+s;
-    }               
+ 
 }

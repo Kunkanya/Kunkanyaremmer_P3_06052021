@@ -31,9 +31,7 @@ h1 {
 .btnmenu__card--description p, .btnmenu__card--name {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: clip;
   text-overflow: ellipsis;
-  text-overflow: "...";
 }
 
 .btnmenu__card--description p, .btnmenu__card--description, .btnmenu__card, .card {
@@ -44,76 +42,52 @@ h1 {
 /*------Loop for create animation-delay in 
 each menu/card while loading page--------*/
 /*---------------------------------------*/
-.btnmenu__card:nth-of-type(1) {
-  animation-delay: 0.5s;
-}
-
 .card:nth-of-type(1) {
   animation-delay: 0.5s;
 }
 
-.btnmenu__card:nth-of-type(2) {
-  animation-delay: 1s;
+.btnmenu__card:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+.btnmenu:nth-of-type(1) {
+  animation-delay: 0.5s;
 }
 
 .card:nth-of-type(2) {
   animation-delay: 1s;
 }
 
-.btnmenu__card:nth-of-type(3) {
-  animation-delay: 1.5s;
+.btnmenu__card:nth-of-type(2) {
+  animation-delay: 1s;
+}
+
+.btnmenu:nth-of-type(2) {
+  animation-delay: 1s;
 }
 
 .card:nth-of-type(3) {
   animation-delay: 1.5s;
 }
 
-.btnmenu__card:nth-of-type(4) {
-  animation-delay: 2s;
+.btnmenu__card:nth-of-type(3) {
+  animation-delay: 1.5s;
+}
+
+.btnmenu:nth-of-type(3) {
+  animation-delay: 1.5s;
 }
 
 .card:nth-of-type(4) {
   animation-delay: 2s;
 }
 
-.btnmenu__card:nth-of-type(5) {
-  animation-delay: 2.5s;
+.btnmenu__card:nth-of-type(4) {
+  animation-delay: 2s;
 }
 
-.card:nth-of-type(5) {
-  animation-delay: 2.5s;
-}
-
-.btnmenu__card:nth-of-type(6) {
-  animation-delay: 3s;
-}
-
-.card:nth-of-type(6) {
-  animation-delay: 3s;
-}
-
-.btnmenu__card:nth-of-type(7) {
-  animation-delay: 3.5s;
-}
-
-.card:nth-of-type(7) {
-  animation-delay: 3.5s;
-}
-
-.btnmenu__card:nth-of-type(8) {
-  animation-delay: 4s;
-}
-
-.card:nth-of-type(8) {
-  animation-delay: 4s;
-}
-
-.btnmenu__card:nth-of-type(9) {
-  animation-delay: 4.5s;
-}
-
-.card:nth-of-type(9) {
-  animation-delay: 4.5s;
+.btnmenu:nth-of-type(4) {
+  animation-delay: 2s;
 }
 
 /*--------Base-------*/
@@ -128,7 +102,6 @@ each menu/card while loading page--------*/
 html body {
   /*increment mycounter reset */
   counter-reset: mycounter;
-  counter-reset: menu_counter;
 }
 
 a, ul > li {
@@ -272,6 +245,83 @@ footer li span {
   margin-left: 0.5rem;
 }
 
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+@media screen and (min-width: 1441px) {
+  .fonction, .main, .footer {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .sMenu {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sMenu__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+  }
+}
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+@media screen and (min-width: 950px) {
+  .sMenu {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sMenu__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+}
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+@media screen and (min-width: 769px) {
+  /*--------------------------->
+  <!--Section 2 : Fonctionnement-->
+  <!---------------------------*/
+  .btn__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    column-gap: 3rem;
+  }
+
+  /*--------------------------->
+  <!--Section 3 : Restuarants-->
+  <!---------------------------*/
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    column-gap: 3rem;
+  }
+
+  .card__container {
+    width: 100%;
+  }
+}
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+@media screen and (max-width: 320px) {
+  .menu__title h1 {
+    font-size: 1.5rem;
+  }
+
+  .btnmenu__card--name {
+    font-size: 1rem;
+  }
+  .btnmenu__card--description {
+    font-size: 0.9rem;
+  }
+}
 /*--------Page-------*/
 /*--------------------------->
 <!--Section 2 : Fonctionement-->
@@ -365,59 +415,6 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-@media screen and (min-width: 1441px) {
-  .fonction, .main, .footer {
-    width: 1440px;
-    margin: 0 auto;
-  }
-}
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-@media screen and (min-width: 769px) {
-  /*--------------------------->
-  <!--Section 2 : Fonctionnement-->
-  <!---------------------------*/
-  .btn__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    column-gap: 3rem;
-  }
-
-  /*--------------------------->
-  <!--Section 3 : Restuarants-->
-  <!---------------------------*/
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    column-gap: 3rem;
-  }
-
-  .card__container {
-    width: 100%;
-  }
-}
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  .btn__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
 /*--------Buttons-------*/
 /*--------------------------------------------->
 <!------Section 1 Header : BUtton Explorer----->
@@ -500,6 +497,9 @@ main {
 /*----------------------------------------------------------->
 <!-------------------Button for menu Reatuarant-------------->
 /*-----------------------------------------------------------*/
+.btnmenu {
+  animation: slidein 1s linear backwards;
+}
 .btnmenu__type {
   border-bottom: solid 3px #99E2D0;
   padding-bottom: 0.2rem;
@@ -522,10 +522,6 @@ main {
 .btnmenu__card:last-child {
   margin-bottom: 3rem;
 }
-.btnmenu__card--name {
-  max-width: 280px;
-  white-space: normal;
-}
 .btnmenu__card--description {
   line-height: 1.6;
   display: flex;
@@ -535,9 +531,6 @@ main {
 .btnmenu__card--description p {
   font-size: 0.93em;
   font-weight: 300;
-}
-.btnmenu__card--description p + strong {
-  padding-left: 10px;
 }
 
 .checked {
@@ -564,7 +557,8 @@ main {
 .btnmenu__card:hover {
   overflow: hidden;
 }
-.btnmenu__card:hover .btnmenu__card--description {
+.btnmenu__card:hover .btnmenu__card--description,
+.btnmenu__card:hover .btnmenu__card--name {
   animation: pushed-left 1s ease-out forwards;
 }
 .btnmenu__card:hover .checked {
@@ -588,14 +582,6 @@ main {
 /**********************************************************************/
 /*************animation for hover the menu card :  Green bar***********/
 /**********************************************************************/
-@keyframes move-left {
-  0% {
-    max-width: 0%;
-  }
-  100% {
-    max-width: 100%;
-  }
-}
 @keyframes pushed-left {
   0% {
     max-width: 100%;
@@ -620,7 +606,7 @@ main {
 /**********************************************************************/
 @keyframes slidein {
   0% {
-    transform: translateY(20px);
+    transform: translateY(20%);
     opacity: 0;
   }
   100% {
@@ -634,15 +620,12 @@ main {
 @keyframes heart-color {
   0% {
     opacity: 0;
-    /*        transform: scale(1);*/
   }
-  50% {
+  80% {
     opacity: 0.5;
-    /*      transform : scale(1.2);*/
   }
   100% {
     opacity: 1;
-    /*      transform : scale(1);*/
   }
 }
 
