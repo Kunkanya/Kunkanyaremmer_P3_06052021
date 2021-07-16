@@ -17,7 +17,18 @@ h1{
    @extend %logo_text;
 }
 
-textarea{
-    font-size: $font-weight-thin;
+.menu__title h2{
+    @extend %logo_text;
 }
-
+textarea{
+    font-weight: $font-weight-thin;
+}
+.loader h1 span{
+//font family same as logo
+    @extend %logo_text;
+//color linear gradient
+    @include background_heart;
+    text-transform: lowercase;
+    font-size: 3rem;
+    padding : 0.8rem;    
+}

@@ -21,8 +21,8 @@ main{
     padding-top : 1rem;
 }
 .card{ 
-    @extend %transition-animation;
-    animation: slidein 1s ease-out backwards ;
+//    @extend %transition-animation;
+//    animation: slidein 1s ease-out backwards ;
     transition: 300ms;
     &__tag {
         width: 80px;
@@ -69,6 +69,7 @@ main{
     }
     &__heart{
         transition: 1s;
+
         display: block ;  
         & i{
             font-size: 1.5rem;
@@ -92,3 +93,30 @@ main{
     }    
 }
 
+//Loading spinner
+.loader{
+    
+    height: 100vh;
+    @include flex(column, center);
+    align-items: center;
+    //animation: loading_spinner 3s ease  2 ;
+    &__text span{
+        display: inline-block; 
+        animation: loading_spinner 3s linear 1 ;
+    }
+}
+
+.progress{
+    margin-top: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+    border : 2px black solid;
+    &__bar{ 
+    height: 15px;
+    width: 500px;
+    transform-origin: 0% 50%;
+    background-color : $color-tertiary;
+    border-radius: 20px;  
+    animation: bar 3s ;  
+}
+}

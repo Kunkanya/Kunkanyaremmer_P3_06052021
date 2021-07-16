@@ -3,19 +3,9 @@
 /*-------------------------------------------------------------*/
 
 @media screen  and (min-width: 1441px) {
-    .fonction, .main, .footer{
+    .fonction, .main, .footer, .sMenu{
     width: 1440px;
     margin: 0 auto;
-    }
-    .sMenu{
-        max-width: 1440px;
-        margin-left: auto;
-        margin-right: auto;
-        &__container{
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            column-gap: 2rem;
-        }
     }
 }
 
@@ -23,7 +13,9 @@
 // Version : small laptop + tablet from 950px;
 /*-------------------------------------------------------------*/
 
-@media screen  and (min-width: 950px) {
+@media screen  and (min-width: 1024px) {
+
+
     .sMenu{
         width : 100%;
         margin-left: auto;
@@ -52,6 +44,7 @@
 /*--------------------------->
 <!--Section 3 : Restuarants-->
 <!---------------------------*/
+
 .cards{
     @include grid(2);
 }
@@ -70,7 +63,7 @@
 /*-------------------------------------------------------------*/
 /*-------------------------------------------------------------*/
 @media screen and (max-width: 320px) {
-    .menu__title h1{
+    .menu__title h2{
         font-size: 1.5rem;
     }
 

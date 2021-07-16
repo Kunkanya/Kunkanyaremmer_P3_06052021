@@ -4,14 +4,6 @@
     justify-content:$fx-justify;
 }
 
-@mixin grid_col3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row: auto;
-    column-gap: 3rem;
-    justify-content: flex-start;
-}
-
 @mixin grid($no){
     display: grid;
     grid-template-columns: repeat($no, 1fr);

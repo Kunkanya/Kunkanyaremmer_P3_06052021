@@ -44,10 +44,34 @@
     0%{
         opacity : 0;
     }
-    80%{
+    70%{
         opacity : 0.5;
     }
     100%{
         opacity: 1;
+    }
+}
+
+
+
+/**********************************************************************/
+/****************animation for the loading spinner*********************/
+/**********************************************************************/
+@keyframes loading_spinner {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes bar{
+    0%{
+       transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
     }
 }

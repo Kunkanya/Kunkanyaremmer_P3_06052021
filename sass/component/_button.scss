@@ -14,7 +14,7 @@
         cursor: pointer;   
         transition : 0.5s ease;      
             &:hover{
-                transform: scale(1.05);
+                opacity: 70%;
                 @extend %shadow-hover;
             }
     }

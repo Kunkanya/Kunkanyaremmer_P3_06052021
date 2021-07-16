@@ -16,6 +16,11 @@ each menu/card while loading page--------*/
         animation-delay: ($i * 0.5)+s;
         }    
 
+}
+
+@for $i from 1 through 8{
+    .loader__text span:nth-of-type(#{$i}){
+        animation-delay: ($i * 0.32)+s;
+        } 
     
- 
 }
