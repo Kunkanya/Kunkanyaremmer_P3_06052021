@@ -91,35 +91,35 @@ each menu/card while loading page--------*/
 }
 
 .loader__text span:nth-of-type(1) {
-  animation-delay: 0.32s;
+  animation-delay: 0.25s;
 }
 
 .loader__text span:nth-of-type(2) {
-  animation-delay: 0.64s;
+  animation-delay: 0.5s;
 }
 
 .loader__text span:nth-of-type(3) {
-  animation-delay: 0.96s;
+  animation-delay: 0.75s;
 }
 
 .loader__text span:nth-of-type(4) {
-  animation-delay: 1.28s;
+  animation-delay: 1s;
 }
 
 .loader__text span:nth-of-type(5) {
-  animation-delay: 1.6s;
+  animation-delay: 1.25s;
 }
 
 .loader__text span:nth-of-type(6) {
-  animation-delay: 1.92s;
+  animation-delay: 1.5s;
 }
 
 .loader__text span:nth-of-type(7) {
-  animation-delay: 2.24s;
+  animation-delay: 1.75s;
 }
 
 .loader__text span:nth-of-type(8) {
-  animation-delay: 2.56s;
+  animation-delay: 2s;
 }
 
 /*--------Base-------*/
@@ -339,6 +339,12 @@ footer li span {
 }
 /*-------------------------------------------------------------*/
 /*-------------------------------------------------------------*/
+@media screen and (max-width: 425px) {
+  .loader h1 span {
+    font-size: 2rem;
+    padding: 0.2rem;
+  }
+}
 /*-------------------------------------------------------------*/
 /*-------------------------------------------------------------*/
 /*-------------------------------------------------------------*/
@@ -355,6 +361,55 @@ footer li span {
   }
 }
 /*--------Page-------*/
+/*--------------------------->
+<!--Section 1 : main-wrapper-->
+<!---------------------------*/
+.main-wrapper {
+  transition: animation 300ms linear;
+  animation: fade-in;
+  animation-fill-mode: both;
+  animation-delay: 3s;
+}
+
+.loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fade-out 0.1s ease-out 3s;
+}
+.loader__text span {
+  display: inline-block;
+  animation: loading_spinner 1.3s linear forwards 1;
+}
+
+.circle_path {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: solid 8px lightgray;
+  margin-top: 20px;
+  background-color: transparent;
+  position: relative;
+  animation: dot 3s linear 1 forwards;
+}
+.circle_path::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: solid gray 1px;
+  background-color: #99E2D0;
+  box-shadow: 0 0 10px #99E2D0, 0 0 10px #99E2D0, 0 0 10px #99E2D0, 0 0 10px #99E2D0, 0 0 10px #99E2D0;
+}
+
 /*--------------------------->
 <!--Section 2 : Fonctionement-->
 <!---------------------------*/
@@ -444,33 +499,6 @@ main {
   /*--clip background--*/
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.loader {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.loader__text span {
-  display: inline-block;
-  animation: loading_spinner 3s linear 1;
-}
-
-.progress {
-  margin-top: 2rem;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 2px black solid;
-}
-.progress__bar {
-  height: 15px;
-  width: 500px;
-  transform-origin: 0% 50%;
-  background-color: #99E2D0;
-  border-radius: 20px;
-  animation: bar 3s;
 }
 
 /*--------Buttons-------*/
@@ -689,20 +717,50 @@ main {
 /**********************************************************************/
 /****************animation for the loading spinner*********************/
 /**********************************************************************/
-@keyframes loading_spinner {
+@keyframes fade-out {
   0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
     opacity: 0;
+    z-index: -100;
+  }
+}
+@keyframes fade-in {
+  0%, 80% {
+    opacity: 0;
+    z-index: 0;
   }
   100% {
     opacity: 1;
+    z-index: 1;
   }
 }
-@keyframes bar {
+@keyframes loading_spinner {
   0% {
-    transform: scaleX(0);
+    opacity: 0.2;
+  }
+  50%, 80% {
+    opacity: 1;
   }
   100% {
-    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+@keyframes dot {
+  0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+    opacity: 0;
+  }
+  80%, 99% {
+    opacity: 1;
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
+  }
+  100% {
+    opacity: 0;
   }
 }
 
