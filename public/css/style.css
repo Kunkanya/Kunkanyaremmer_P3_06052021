@@ -91,35 +91,35 @@ each menu/card while loading page--------*/
 }
 
 .loader__text span:nth-of-type(1) {
-  animation-delay: 0.25s;
+  animation-delay: 0.35s;
 }
 
 .loader__text span:nth-of-type(2) {
-  animation-delay: 0.5s;
+  animation-delay: 0.7s;
 }
 
 .loader__text span:nth-of-type(3) {
-  animation-delay: 0.75s;
+  animation-delay: 1.05s;
 }
 
 .loader__text span:nth-of-type(4) {
-  animation-delay: 1s;
+  animation-delay: 1.4s;
 }
 
 .loader__text span:nth-of-type(5) {
-  animation-delay: 1.25s;
-}
-
-.loader__text span:nth-of-type(6) {
-  animation-delay: 1.5s;
-}
-
-.loader__text span:nth-of-type(7) {
   animation-delay: 1.75s;
 }
 
+.loader__text span:nth-of-type(6) {
+  animation-delay: 2.1s;
+}
+
+.loader__text span:nth-of-type(7) {
+  animation-delay: 2.45s;
+}
+
 .loader__text span:nth-of-type(8) {
-  animation-delay: 2s;
+  animation-delay: 2.8s;
 }
 
 /*--------Base-------*/
@@ -382,11 +382,11 @@ footer li span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: fade-out 0.1s ease-out 3s;
+  animation: fade-out 0.001s ease-out 3s backwards;
 }
 .loader__text span {
   display: inline-block;
-  animation: loading_spinner 1.3s linear forwards 1;
+  animation: loading_spinner linear forwards 1;
 }
 
 .circle_path {
@@ -397,7 +397,7 @@ footer li span {
   margin-top: 20px;
   background-color: transparent;
   position: relative;
-  animation: dot 3s linear 1 forwards;
+  animation: dot 3s linear 1 both;
 }
 .circle_path::before {
   content: "";
@@ -634,8 +634,8 @@ main {
   width: fit-content;
   height: fit-content;
   position: relative;
-  top: 32.5%;
-  left: 25%;
+  top: 20px;
+  left: 15px;
   color: white;
   font-size: 1.5rem;
 }
@@ -741,7 +741,7 @@ main {
   0% {
     opacity: 0.2;
   }
-  50%, 80% {
+  50%, 99% {
     opacity: 1;
   }
   100% {
@@ -750,17 +750,14 @@ main {
 }
 @keyframes dot {
   0% {
+    opacity: 0.5;
     transform: rotate(0deg);
     filter: hue-rotate(0deg);
-    opacity: 0;
   }
-  80%, 99% {
+  100% {
     opacity: 1;
     filter: hue-rotate(360deg);
     transform: rotate(360deg);
-  }
-  100% {
-    opacity: 0;
   }
 }
 

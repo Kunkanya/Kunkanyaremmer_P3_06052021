@@ -20,7 +20,6 @@ each menu/card while loading page--------*/
 
 @for $i from 1 through 8{
     .loader__text span:nth-of-type(#{$i}){
-        animation-delay: ($i * 0.25)+s;
-        } 
-    
+        animation-delay: ($i * 0.35)+s;
+        }    
 }

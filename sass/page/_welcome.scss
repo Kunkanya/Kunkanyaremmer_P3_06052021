@@ -19,11 +19,11 @@
     left: 0;
     @include flex(column, center);
     align-items: center;
-    animation: fade-out 0.1s ease-out 3s ;
+    animation: fade-out 0.001s ease-out 3s backwards;
     &__text span{
         display: inline-block; 
         // animation for loading spinner
-        animation: loading_spinner 1.3s linear forwards 1;
+        animation: loading_spinner  linear forwards 1;
     }
 }
 
@@ -36,7 +36,7 @@
     background-color : transparent;
     position : relative;
     // animation for green dot in the loading spinner
-    animation: dot 3s linear 1 forwards;
+    animation: dot 3s linear 1 both;
     &::before{
         content: "";
         position: absolute;
