@@ -292,8 +292,12 @@ footer li span {
 /*-------------------------------------------------------------*/
 @media screen and (min-width: 1441px) {
   .fonction, .main, .footer, .sMenu {
-    width: 1440px;
+    width: 1440px !important;
     margin: 0 auto;
+  }
+
+  .sMenu {
+    margin-top: -50px;
   }
 }
 /*-------------------------------------------------------------*/
